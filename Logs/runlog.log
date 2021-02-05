@@ -1,0 +1,252 @@
+2020-11-23 18:07:34,540 delete_logs.py[line:51] INFO 删除: D:\Python_Project\Voice_Tool\Logs/audio
+2020-11-23 18:07:34,541 delete_logs.py[line:62] INFO 删除： D:\Python_Project\Voice_Tool\Logs/original_log
+2020-11-23 18:07:34,542 delete_logs.py[line:73] INFO 删除： D:\Python_Project\Voice_Tool\Logs/result_log
+2020-11-23 18:07:57,888 main.py[line:233] INFO 点击开始测试按钮，开始测试
+2020-11-23 18:07:57,889 main.py[line:236] INFO 获取到的设备id：JYZ6948
+2020-11-23 18:07:57,889 main.py[line:239] INFO 获取到的email: 319910390@qq.com;
+2020-11-23 18:07:57,889 main.py[line:242] INFO 获取到的设备版本号：1
+2020-11-23 18:07:57,895 main.py[line:59] INFO 没有中文，返回字符串
+2020-11-23 18:07:57,896 operate_excel.py[line:25] INFO excel路径C:/Users/weiwei/Desktop/语料合成/result_2020_11_23_18_07_57.xlsx
+2020-11-23 18:07:57,927 main.py[line:117] INFO 创建excel文件，保存测试结果：C:/Users/weiwei/Desktop/语料合成/result_2020_11_23_18_07_57.xlsx
+2020-11-23 18:07:57,927 test.py[line:488] INFO xiaoyou_path:C:/Users/weiwei/Desktop/语料合成/xiaoyou/
+2020-11-23 18:07:57,927 test.py[line:548] INFO 唤醒词数量少于交互词数量，处理一下
+2020-11-23 18:07:57,928 test.py[line:553] INFO 读入的唤醒词数量: 12
+2020-11-23 18:07:57,928 test.py[line:556] INFO 读入的交互词数量: 13
+2020-11-23 18:07:57,928 test.py[line:577] INFO 处理后的唤醒词数量:13
+2020-11-23 18:07:57,928 test.py[line:581] INFO 处理后交互词的数量：13
+2020-11-23 18:07:57,928 test.py[line:584] INFO 唤醒词列表:
+2020-11-23 18:07:57,928 test.py[line:585] INFO ['C:/Users/weiwei/Desktop/语料合成/xiaoyou/chihongxin-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/conghongying-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/fangyongda-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/linshun-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/liucaifei-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/liujiuyang-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/liuli-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/sunjixing-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/xuquanfeng-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/yuanwenyuan-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/zhangfengxia-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/zhangyuejiao-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/chihongxin-cvt.wav']
+2020-11-23 18:07:57,928 test.py[line:587] INFO 交互词列表：
+2020-11-23 18:07:57,928 test.py[line:588] INFO ['C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/上海的天气怎么样.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/下午四点半提醒我开会.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天天气如何.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天温度多少.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听今天的新闻.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听刘德华的歌.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听相声.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/打开热水器.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/打开空调.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/海尔股价是多少.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/热水器水温设为50度.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/红烧肉怎么做.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/青岛的天气.wav']
+2020-11-23 18:07:57,928 test.py[line:590] INFO 交互文本列表：
+2020-11-23 18:07:57,928 test.py[line:591] INFO ['C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/上海的天气怎么样.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/下午四点半提醒我开会.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天天气如何.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天温度多少.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听今天的新闻.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听刘德华的歌.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听相声.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/打开热水器.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/打开空调.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/海尔股价是多少.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/热水器水温设为50度.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/红烧肉怎么做.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/青岛的天气.txt']
+2020-11-23 18:07:57,929 main.py[line:120] INFO 文件预处理完毕,打印下处理后返回的结果
+2020-11-23 18:07:57,929 main.py[line:121] INFO xiaoyou_path_wav_new:
+2020-11-23 18:07:57,929 main.py[line:122] INFO ['C:/Users/weiwei/Desktop/语料合成/xiaoyou/chihongxin-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/conghongying-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/fangyongda-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/linshun-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/liucaifei-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/liujiuyang-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/liuli-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/sunjixing-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/xuquanfeng-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/yuanwenyuan-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/zhangfengxia-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/zhangyuejiao-cvt.wav', 'C:/Users/weiwei/Desktop/语料合成/xiaoyou/chihongxin-cvt.wav']
+2020-11-23 18:07:57,929 main.py[line:123] INFO jiaohu_path_wav:
+2020-11-23 18:07:57,929 main.py[line:124] INFO ['C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/上海的天气怎么样.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/下午四点半提醒我开会.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天天气如何.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天温度多少.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听今天的新闻.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听刘德华的歌.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听相声.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/打开热水器.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/打开空调.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/海尔股价是多少.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/热水器水温设为50度.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/红烧肉怎么做.wav', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/青岛的天气.wav']
+2020-11-23 18:07:57,929 main.py[line:125] INFO jiaohu_path_txt:
+2020-11-23 18:07:57,929 main.py[line:126] INFO ['C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/上海的天气怎么样.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/下午四点半提醒我开会.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天天气如何.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天温度多少.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听今天的新闻.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听刘德华的歌.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听相声.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/打开热水器.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/打开空调.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/海尔股价是多少.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/热水器水温设为50度.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/红烧肉怎么做.txt', 'C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/青岛的天气.txt']
+2020-11-23 18:08:00,937 main.py[line:144] INFO 播放唤醒词： C:/Users/weiwei/Desktop/语料合成/xiaoyou/chihongxin-cvt.wav
+2020-11-23 18:08:01,008 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:2
+RATE:44100
+2020-11-23 18:08:02,254 test.py[line:468] INFO 播放结束
+2020-11-23 18:08:05,255 main.py[line:149] INFO 播放交互词： C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/上海的天气怎么样.wav
+2020-11-23 18:08:05,295 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:1
+RATE:16000
+2020-11-23 18:08:07,535 test.py[line:468] INFO 播放结束
+2020-11-23 18:08:07,535 main.py[line:152] INFO 等待(s).........60
+2020-11-23 18:08:07,535 main.py[line:153] INFO 这个过程期间如果小优没有识别正确，你可以人工干预......
+2020-11-23 18:09:07,535 main.py[line:156] INFO 开始拉取日志....
+2020-11-23 18:09:07,535 main.py[line:157] INFO   deviceid:   JYZ6948
+2020-11-23 18:09:07,535 test.py[line:51] INFO adb shell 命令：adb -s JYZ6948 pull /data/uai_log.txt D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_09_07
+2020-11-23 18:09:07,718 test.py[line:60] INFO 拉取audio文件
+2020-11-23 18:09:07,718 test.py[line:68] INFO adb 拉取audio文件命令： adb -s JYZ6948 pull /tmp/audio D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_09_07
+2020-11-23 18:09:11,005 main.py[line:161] INFO ====log地址====
+2020-11-23 18:09:11,005 main.py[line:163] INFO file_path: D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_09_07\uai_log.txt
+2020-11-23 18:09:11,005 main.py[line:165] INFO filter_log_path: D:\Python_Project\Voice_Tool/Logs/result_log/filter_uai_log_2020_11_23_18_09_07.txt
+2020-11-23 18:09:11,005 main.py[line:166] INFO audio_path: D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_09_07
+2020-11-23 18:09:14,155 test.py[line:242] INFO 找到了 recogniationText===================
+2020-11-23 18:09:14,156 test.py[line:242] INFO 找到了 recogniationText===================
+2020-11-23 18:09:14,157 test.py[line:242] INFO 找到了 recogniationText===================
+2020-11-23 18:09:14,158 test.py[line:242] INFO 找到了 recogniationText===================
+2020-11-23 18:09:14,250 test.py[line:218] INFO b''
+2020-11-23 18:09:14,250 test.py[line:220] INFO 日志读取结束了
+2020-11-23 18:09:14,251 test.py[line:270] INFO 总行数 lineNumbers: 6584
+2020-11-23 18:09:26,253 test.py[line:738] INFO txt_path: C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/上海的天气怎么样.txt
+2020-11-23 18:09:26,258 test.py[line:752] INFO 读取的配置文件的字符：上海的天气怎么样
+2020-11-23 18:09:26,260 test.py[line:768] INFO 正则匹配到了
+2020-11-23 18:09:26,260 test.py[line:769] INFO matchObj_wakeup.group: /uaibot(  460:546622853600) DEBUG  [app][onWakeup] app - wakeup: xiaoyouxiaoyou
+2020-11-23 18:09:26,260 test.py[line:770] INFO matchObj_wakeup.group(1): (  460:546622853600) DEBUG  
+2020-11-23 18:09:26,260 test.py[line:771] INFO 输出该行：  /uaibot(  460:546622853600) DEBUG  [app][onWakeup] app - wakeup: xiaoyouxiaoyou
+2020-11-23 18:09:26,267 test.py[line:829] INFO pattern4 匹配到了
+2020-11-23 18:09:26,267 test.py[line:835] INFO identy_str: 上海的钱
+2020-11-23 18:09:26,268 test.py[line:836] INFO nlp_str: /ù上海的地铁和轻轨目前采用按里程计费的方式,/ù与所乘站数无关
+2020-11-23 18:09:26,278 test.py[line:850] INFO 识别到的字符串: ['上海的钱']
+2020-11-23 18:09:26,279 test.py[line:858] INFO nlp返回结果： ['/ù上海的地铁和轻轨目前采用按里程计费的方式,/ù与所乘站数无关']
+2020-11-23 18:09:26,279 main.py[line:175] INFO 结果写入excel中: C:/Users/weiwei/Desktop/语料合成/result_2020_11_23_18_07_57.xlsx
+2020-11-23 18:09:32,301 main.py[line:144] INFO 播放唤醒词： C:/Users/weiwei/Desktop/语料合成/xiaoyou/conghongying-cvt.wav
+2020-11-23 18:09:32,337 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:2
+RATE:44100
+2020-11-23 18:09:33,833 test.py[line:468] INFO 播放结束
+2020-11-23 18:09:36,834 main.py[line:149] INFO 播放交互词： C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/下午四点半提醒我开会.wav
+2020-11-23 18:09:36,876 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:1
+RATE:16000
+2020-11-23 18:09:39,938 test.py[line:468] INFO 播放结束
+2020-11-23 18:09:39,939 main.py[line:152] INFO 等待(s).........60
+2020-11-23 18:09:39,939 main.py[line:153] INFO 这个过程期间如果小优没有识别正确，你可以人工干预......
+2020-11-23 18:10:39,939 main.py[line:156] INFO 开始拉取日志....
+2020-11-23 18:10:39,939 main.py[line:157] INFO   deviceid:   JYZ6948
+2020-11-23 18:10:39,939 test.py[line:51] INFO adb shell 命令：adb -s JYZ6948 pull /data/uai_log.txt D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_10_39
+2020-11-23 18:10:40,114 test.py[line:60] INFO 拉取audio文件
+2020-11-23 18:10:40,115 test.py[line:68] INFO adb 拉取audio文件命令： adb -s JYZ6948 pull /tmp/audio D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_10_39
+2020-11-23 18:10:43,260 main.py[line:161] INFO ====log地址====
+2020-11-23 18:10:43,260 main.py[line:163] INFO file_path: D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_10_39\uai_log.txt
+2020-11-23 18:10:43,260 main.py[line:165] INFO filter_log_path: D:\Python_Project\Voice_Tool/Logs/result_log/filter_uai_log_2020_11_23_18_10_39.txt
+2020-11-23 18:10:43,260 main.py[line:166] INFO audio_path: D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_10_39
+2020-11-23 18:10:46,446 test.py[line:218] INFO b''
+2020-11-23 18:10:46,446 test.py[line:220] INFO 日志读取结束了
+2020-11-23 18:10:46,446 test.py[line:270] INFO 总行数 lineNumbers: 7266
+2020-11-23 18:10:58,448 test.py[line:738] INFO txt_path: C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/下午四点半提醒我开会.txt
+2020-11-23 18:10:58,449 test.py[line:752] INFO 读取的配置文件的字符：下午四点半提醒我开会
+2020-11-23 18:10:58,452 test.py[line:768] INFO 正则匹配到了
+2020-11-23 18:10:58,452 test.py[line:769] INFO matchObj_wakeup.group: /uaibot(  460:546622853600) DEBUG  [app][onWakeup] app - wakeup: xiaoyouxiaoyou
+2020-11-23 18:10:58,452 test.py[line:770] INFO matchObj_wakeup.group(1): (  460:546622853600) DEBUG  
+2020-11-23 18:10:58,453 test.py[line:771] INFO 输出该行：  /uaibot(  460:546622853600) DEBUG  [app][onWakeup] app - wakeup: xiaoyouxiaoyou
+2020-11-23 18:10:58,466 test.py[line:850] INFO 识别到的字符串: []
+2020-11-23 18:10:58,466 test.py[line:858] INFO nlp返回结果： []
+2020-11-23 18:10:58,467 main.py[line:175] INFO 结果写入excel中: C:/Users/weiwei/Desktop/语料合成/result_2020_11_23_18_07_57.xlsx
+2020-11-23 18:11:04,493 main.py[line:144] INFO 播放唤醒词： C:/Users/weiwei/Desktop/语料合成/xiaoyou/fangyongda-cvt.wav
+2020-11-23 18:11:04,546 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:2
+RATE:44100
+2020-11-23 18:11:05,582 test.py[line:468] INFO 播放结束
+2020-11-23 18:11:08,583 main.py[line:149] INFO 播放交互词： C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天天气如何.wav
+2020-11-23 18:11:08,621 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:1
+RATE:16000
+2020-11-23 18:11:10,726 test.py[line:468] INFO 播放结束
+2020-11-23 18:11:10,726 main.py[line:152] INFO 等待(s).........60
+2020-11-23 18:11:10,726 main.py[line:153] INFO 这个过程期间如果小优没有识别正确，你可以人工干预......
+2020-11-23 18:12:10,727 main.py[line:156] INFO 开始拉取日志....
+2020-11-23 18:12:10,727 main.py[line:157] INFO   deviceid:   JYZ6948
+2020-11-23 18:12:10,727 test.py[line:51] INFO adb shell 命令：adb -s JYZ6948 pull /data/uai_log.txt D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_12_10
+2020-11-23 18:12:10,901 test.py[line:60] INFO 拉取audio文件
+2020-11-23 18:12:10,902 test.py[line:68] INFO adb 拉取audio文件命令： adb -s JYZ6948 pull /tmp/audio D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_12_10
+2020-11-23 18:12:13,964 main.py[line:161] INFO ====log地址====
+2020-11-23 18:12:13,964 main.py[line:163] INFO file_path: D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_12_10\uai_log.txt
+2020-11-23 18:12:13,964 main.py[line:165] INFO filter_log_path: D:\Python_Project\Voice_Tool/Logs/result_log/filter_uai_log_2020_11_23_18_12_10.txt
+2020-11-23 18:12:13,964 main.py[line:166] INFO audio_path: D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_12_10
+2020-11-23 18:12:17,147 test.py[line:218] INFO b''
+2020-11-23 18:12:17,147 test.py[line:220] INFO 日志读取结束了
+2020-11-23 18:12:17,147 test.py[line:270] INFO 总行数 lineNumbers: 7878
+2020-11-23 18:12:29,148 test.py[line:738] INFO txt_path: C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天天气如何.txt
+2020-11-23 18:12:29,149 test.py[line:752] INFO 读取的配置文件的字符：今天天气如何
+2020-11-23 18:12:29,153 test.py[line:768] INFO 正则匹配到了
+2020-11-23 18:12:29,153 test.py[line:769] INFO matchObj_wakeup.group: /uaibot(  460:546622853600) DEBUG  [app][onWakeup] app - wakeup: xiaoyouxiaoyou
+2020-11-23 18:12:29,153 test.py[line:770] INFO matchObj_wakeup.group(1): (  460:546622853600) DEBUG  
+2020-11-23 18:12:29,154 test.py[line:771] INFO 输出该行：  /uaibot(  460:546622853600) DEBUG  [app][onWakeup] app - wakeup: xiaoyouxiaoyou
+2020-11-23 18:12:29,173 test.py[line:850] INFO 识别到的字符串: []
+2020-11-23 18:12:29,173 test.py[line:858] INFO nlp返回结果： []
+2020-11-23 18:12:29,174 main.py[line:175] INFO 结果写入excel中: C:/Users/weiwei/Desktop/语料合成/result_2020_11_23_18_07_57.xlsx
+2020-11-23 18:12:35,200 main.py[line:144] INFO 播放唤醒词： C:/Users/weiwei/Desktop/语料合成/xiaoyou/linshun-cvt.wav
+2020-11-23 18:12:35,257 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:2
+RATE:44100
+2020-11-23 18:12:36,222 test.py[line:468] INFO 播放结束
+2020-11-23 18:12:39,223 main.py[line:149] INFO 播放交互词： C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天温度多少.wav
+2020-11-23 18:12:39,258 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:1
+RATE:16000
+2020-11-23 18:12:41,361 test.py[line:468] INFO 播放结束
+2020-11-23 18:12:41,361 main.py[line:152] INFO 等待(s).........60
+2020-11-23 18:12:41,361 main.py[line:153] INFO 这个过程期间如果小优没有识别正确，你可以人工干预......
+2020-11-23 18:13:41,362 main.py[line:156] INFO 开始拉取日志....
+2020-11-23 18:13:41,362 main.py[line:157] INFO   deviceid:   JYZ6948
+2020-11-23 18:13:41,362 test.py[line:51] INFO adb shell 命令：adb -s JYZ6948 pull /data/uai_log.txt D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_13_41
+2020-11-23 18:13:41,532 test.py[line:60] INFO 拉取audio文件
+2020-11-23 18:13:41,532 test.py[line:68] INFO adb 拉取audio文件命令： adb -s JYZ6948 pull /tmp/audio D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_13_41
+2020-11-23 18:13:44,596 main.py[line:161] INFO ====log地址====
+2020-11-23 18:13:44,596 main.py[line:163] INFO file_path: D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_13_41\uai_log.txt
+2020-11-23 18:13:44,596 main.py[line:165] INFO filter_log_path: D:\Python_Project\Voice_Tool/Logs/result_log/filter_uai_log_2020_11_23_18_13_41.txt
+2020-11-23 18:13:44,596 main.py[line:166] INFO audio_path: D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_13_41
+2020-11-23 18:13:47,700 test.py[line:218] INFO b''
+2020-11-23 18:13:47,700 test.py[line:220] INFO 日志读取结束了
+2020-11-23 18:13:47,700 test.py[line:270] INFO 总行数 lineNumbers: 8092
+2020-11-23 18:13:59,702 test.py[line:738] INFO txt_path: C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/今天温度多少.txt
+2020-11-23 18:13:59,707 test.py[line:752] INFO 读取的配置文件的字符：今天温度多少
+2020-11-23 18:13:59,709 test.py[line:850] INFO 识别到的字符串: []
+2020-11-23 18:13:59,710 test.py[line:858] INFO nlp返回结果： []
+2020-11-23 18:13:59,710 main.py[line:175] INFO 结果写入excel中: C:/Users/weiwei/Desktop/语料合成/result_2020_11_23_18_07_57.xlsx
+2020-11-23 18:14:05,743 main.py[line:144] INFO 播放唤醒词： C:/Users/weiwei/Desktop/语料合成/xiaoyou/liucaifei-cvt.wav
+2020-11-23 18:14:05,796 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:2
+RATE:44100
+2020-11-23 18:14:07,060 test.py[line:468] INFO 播放结束
+2020-11-23 18:14:10,062 main.py[line:149] INFO 播放交互词： C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听今天的新闻.wav
+2020-11-23 18:14:10,098 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:1
+RATE:16000
+2020-11-23 18:14:12,461 test.py[line:468] INFO 播放结束
+2020-11-23 18:14:12,461 main.py[line:152] INFO 等待(s).........60
+2020-11-23 18:14:12,461 main.py[line:153] INFO 这个过程期间如果小优没有识别正确，你可以人工干预......
+2020-11-23 18:15:12,462 main.py[line:156] INFO 开始拉取日志....
+2020-11-23 18:15:12,462 main.py[line:157] INFO   deviceid:   JYZ6948
+2020-11-23 18:15:12,462 test.py[line:51] INFO adb shell 命令：adb -s JYZ6948 pull /data/uai_log.txt D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_15_12
+2020-11-23 18:15:13,025 test.py[line:60] INFO 拉取audio文件
+2020-11-23 18:15:13,025 test.py[line:68] INFO adb 拉取audio文件命令： adb -s JYZ6948 pull /tmp/audio D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_15_12
+2020-11-23 18:15:16,182 main.py[line:161] INFO ====log地址====
+2020-11-23 18:15:16,182 main.py[line:163] INFO file_path: D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_15_12\uai_log.txt
+2020-11-23 18:15:16,182 main.py[line:165] INFO filter_log_path: D:\Python_Project\Voice_Tool/Logs/result_log/filter_uai_log_2020_11_23_18_15_12.txt
+2020-11-23 18:15:16,182 main.py[line:166] INFO audio_path: D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_15_12
+2020-11-23 18:15:19,373 test.py[line:218] INFO b''
+2020-11-23 18:15:19,373 test.py[line:220] INFO 日志读取结束了
+2020-11-23 18:15:19,373 test.py[line:270] INFO 总行数 lineNumbers: 8700
+2020-11-23 18:15:31,374 test.py[line:738] INFO txt_path: C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听今天的新闻.txt
+2020-11-23 18:15:31,374 test.py[line:752] INFO 读取的配置文件的字符：我想听今天的新闻
+2020-11-23 18:15:31,375 test.py[line:768] INFO 正则匹配到了
+2020-11-23 18:15:31,375 test.py[line:769] INFO matchObj_wakeup.group: /uaibot(  460:546622853600) DEBUG  [app][onWakeup] app - wakeup: xiaoyouxiaoyou
+2020-11-23 18:15:31,375 test.py[line:770] INFO matchObj_wakeup.group(1): (  460:546622853600) DEBUG  
+2020-11-23 18:15:31,375 test.py[line:771] INFO 输出该行：  /uaibot(  460:546622853600) DEBUG  [app][onWakeup] app - wakeup: xiaoyouxiaoyou
+2020-11-23 18:15:31,385 test.py[line:850] INFO 识别到的字符串: []
+2020-11-23 18:15:31,385 test.py[line:858] INFO nlp返回结果： []
+2020-11-23 18:15:31,385 main.py[line:175] INFO 结果写入excel中: C:/Users/weiwei/Desktop/语料合成/result_2020_11_23_18_07_57.xlsx
+2020-11-23 18:15:37,421 main.py[line:144] INFO 播放唤醒词： C:/Users/weiwei/Desktop/语料合成/xiaoyou/liujiuyang-cvt.wav
+2020-11-23 18:15:37,471 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:2
+RATE:44100
+2020-11-23 18:15:38,741 test.py[line:468] INFO 播放结束
+2020-11-23 18:15:41,741 main.py[line:149] INFO 播放交互词： C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听刘德华的歌.wav
+2020-11-23 18:15:41,777 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:1
+RATE:16000
+2020-11-23 18:15:44,069 test.py[line:468] INFO 播放结束
+2020-11-23 18:15:44,070 main.py[line:152] INFO 等待(s).........60
+2020-11-23 18:15:44,070 main.py[line:153] INFO 这个过程期间如果小优没有识别正确，你可以人工干预......
+2020-11-23 18:16:44,071 main.py[line:156] INFO 开始拉取日志....
+2020-11-23 18:16:44,071 main.py[line:157] INFO   deviceid:   JYZ6948
+2020-11-23 18:16:44,071 test.py[line:51] INFO adb shell 命令：adb -s JYZ6948 pull /data/uai_log.txt D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_16_44
+2020-11-23 18:16:44,248 test.py[line:60] INFO 拉取audio文件
+2020-11-23 18:16:44,248 test.py[line:68] INFO adb 拉取audio文件命令： adb -s JYZ6948 pull /tmp/audio D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_16_44
+2020-11-23 18:16:47,308 main.py[line:161] INFO ====log地址====
+2020-11-23 18:16:47,308 main.py[line:163] INFO file_path: D:\Python_Project\Voice_Tool/Logs/original_log/uai_log_2020_11_23_18_16_44\uai_log.txt
+2020-11-23 18:16:47,308 main.py[line:165] INFO filter_log_path: D:\Python_Project\Voice_Tool/Logs/result_log/filter_uai_log_2020_11_23_18_16_44.txt
+2020-11-23 18:16:47,308 main.py[line:166] INFO audio_path: D:\Python_Project\Voice_Tool/Logs/audio/audio_2020_11_23_18_16_44
+2020-11-23 18:16:50,440 test.py[line:218] INFO b''
+2020-11-23 18:16:50,440 test.py[line:220] INFO 日志读取结束了
+2020-11-23 18:16:50,440 test.py[line:270] INFO 总行数 lineNumbers: 8916
+2020-11-23 18:17:02,442 test.py[line:738] INFO txt_path: C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听刘德华的歌.txt
+2020-11-23 18:17:02,446 test.py[line:752] INFO 读取的配置文件的字符：我想听刘德华的歌
+2020-11-23 18:17:02,453 test.py[line:850] INFO 识别到的字符串: []
+2020-11-23 18:17:02,453 test.py[line:858] INFO nlp返回结果： []
+2020-11-23 18:17:02,454 main.py[line:175] INFO 结果写入excel中: C:/Users/weiwei/Desktop/语料合成/result_2020_11_23_18_07_57.xlsx
+2020-11-23 18:17:08,486 main.py[line:144] INFO 播放唤醒词： C:/Users/weiwei/Desktop/语料合成/xiaoyou/liuli-cvt.wav
+2020-11-23 18:17:08,535 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:2
+RATE:44100
+2020-11-23 18:17:09,760 test.py[line:468] INFO 播放结束
+2020-11-23 18:17:12,761 main.py[line:149] INFO 播放交互词： C:/Users/weiwei/Desktop/语料合成/tmp/合成方言/河南话/我想听相声.wav
+2020-11-23 18:17:12,797 test.py[line:453] INFO 播放的系统参数
+FORMAF:8 
+CHANELS:1
+RATE:16000
+2020-11-23 18:17:14,579 test.py[line:468] INFO 播放结束
+2020-11-23 18:17:14,579 main.py[line:152] INFO 等待(s).........60
+2020-11-23 18:17:14,579 main.py[line:153] INFO 这个过程期间如果小优没有识别正确，你可以人工干预......

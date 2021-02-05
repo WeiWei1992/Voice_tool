@@ -1,0 +1,8 @@
+deviceid =JYZ25266
+deviceversion =1.0
+Email =319910390@qq.com;wei_wei1992@yeah.net
+wake_path =C:/Users/weiwei/Desktop/语料合成/xiaoyou
+jiaohu_path =C:/Users/weiwei/Desktop/语料合成/tmp
+excel_path =C:/Users/weiwei/Desktop/语料合成
+wait_time = 60
+

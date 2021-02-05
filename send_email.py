@@ -123,8 +123,15 @@ def my_send(excel_path,msg_to,device_version=None):
     #识别次数
     identify_number=0
     for i in range(row_num):
-        is_wake=mysheet.cell(i+3,6).value
-        is_identify=mysheet.cell(i+3,8).value
+        is_wake=mysheet.cell(i+3,7).value
+        is_identify=mysheet.cell(i+3,9).value
+
+        print("is_wake: ",is_wake)
+        print("type(is_wake): ",type(is_wake))
+
+        print("is_identify: ",is_identify)
+        print("type(is_identify): ",type(is_identify))
+
         if is_wake:
             wake_nmu=wake_nmu+1
         if is_identify:

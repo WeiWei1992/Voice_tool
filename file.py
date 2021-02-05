@@ -47,6 +47,22 @@ def get_txt_line(filepath=None):
     return real_str
 
 
+def get_parameter(name,file=None):
+    if file:
+        pass
+    else:
+        file='config.txt'
+    with open(file,encoding='utf-8') as f:
+        lines=f.readlines()
+        for line in lines:
+            line=line.strip()  #去掉空格
+            #print(line)
+            if name in line:
+                res=line.split('=')[-1]
+                return res
+    logging.error("配置文件错误，没有找到 "+name)
+
+
 if __name__=="__main__":
     mytxt=get_txt_line()
     if mytxt=='':

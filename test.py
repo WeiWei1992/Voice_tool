@@ -40,9 +40,13 @@ def load_log(device_id=None, filepath=None, filter_log_path=None):
 
     # device_id=get_txt_line()
     if device_id == '':
-        adbshell = 'adb pull /tmp/uai_log.txt ' + filepath
+        #adbshell = 'adb pull /data/uai_log.txt ' + filepath
+        adbshell = 'adb pull /data/uai_log.txt ' + filepath
+
     else:
-        adbshell = 'adb -s ' + str(device_id) + ' pull /tmp/uai_log.txt ' + filepath
+        #adbshell = 'adb -s ' + str(device_id) + ' pull /data/uai_log.txt ' + filepath
+        adbshell = 'adb -s ' + str(device_id) + ' pull /data/uai_log.txt ' + filepath
+
     # print(adbshell)
     logging.info("adb shell 命令：" + adbshell)
     result = os.path.exists(filepath)
@@ -52,6 +56,28 @@ def load_log(device_id=None, filepath=None, filter_log_path=None):
     else:  # 如果不存在，先新建
         os.mkdir(filepath)
         os.system(adbshell)
+
+    logging.info("拉取audio文件")
+    audio_path=my_path+'/Logs/audio/audio_%s' %(now_time)
+
+    if device_id =='':
+        audio_shell='adb pull /tmp/audio '+audio_path
+    else:
+        audio_shell='adb -s '+str(device_id) +' pull /tmp/audio '+audio_path
+
+    logging.info("adb 拉取audio文件命令： "+str(audio_shell))
+    res=os.path.exists(audio_path)
+    if res:
+        os.system(audio_shell)
+    else:
+        os.mkdir(audio_path)
+        os.system(audio_shell)
+
+
+
+    txt="This is my filter log ,weiwei"
+    save_txt(txt,filter_log_path)
+
     file_path_1 = filepath + '\\uai_log.txt'
     file_path_2 = filepath + '\\uai_log_convert.txt'
     # res=convertUTF8ToANSI(file_path_1,file_path_2)
@@ -59,7 +85,7 @@ def load_log(device_id=None, filepath=None, filter_log_path=None):
     #     print("txt文件转码错误，不进行转码了")
     #     file_path_2=file_path_1
     time.sleep(3)
-    return file_path_1, filter_log_path
+    return file_path_1, filter_log_path,audio_path
 
 
 def filter_time(line):
@@ -76,11 +102,16 @@ def filter_time(line):
     :return: False or True
     '''
     # 正式使用时，该正则要放到外面，是个全局的，这样就只初始化一次了就
-    # pattern = re.compile(r'\d{4}(\-\|\/|.)(\s)\d{1,2}\1\d{1,2}')  # 时间的正则,\s表示空格
-    pattern = re.compile(r'b\'\d{4}(\-\|\/|.)(\s)\d{1,2}\1\d{1,2}')  # 时间的正则,\s表示空格
+
+    #pattern = re.compile(r'b\'\d{4}(\-\|\/|.)(\s)\d{1,2}\1\d{1,2}')  # 时间的正则,\s表示空格
+
+    #2020-10-12 日志时间格式变化(版本号2.5.15)，需要修改正则
+    #line = "b'2020-10-12 10:04:08.040\n'"
+    pattern = re.compile(r'(b)?\'\d{4}(\-\|\/|.)\d{1,2}(\-\|\/|.)\d{1,2}\s\d{1,2}\:\d{1,2}\:\d{1,2}\.\d{1,4}(\n)?')  # 时间的正则,\s表示空格
     line = line.strip('\n')  # 去掉换行符
     # line=line.strip('\n')
     time_result = pattern.match(line)
+    #print("time_result： ",time_result)
     # pattern.search:可以在字符串任何位置匹问配
     # pattern.match:是从字符百串开头进行度匹配
     if time_result is None:
@@ -97,22 +128,30 @@ def transform_log_time(line):
     # print("输入要检测的时间行： ",line)
     # print("输入的时间行：",line)
     line = str(line)
+    #print("line:  ",line)
     # 这几行是因为读入是以二进制读入的，需要特殊处理一下
     line = line.replace('\'', '')
     line = line.replace('b', '')
     line = line.strip('\n')
     line = line.replace('\\', '')
     line = line.replace('n', '')
-
+    #print("line: ",line)
     # print("处理后的时间行")
     # print("转换日志时间戳: ",line)
     try:
-        datetime_obj = datetime.strptime(line, "%Y- %m-%d %H:%M:%S.%f")
+        #datetime_obj = datetime.strptime(line, "%Y- %m-%d %H:%M:%S.%f")
+        #2020-10-12日志中时间格式修改了，需要适配
+        datetime_obj = datetime.strptime(line, "%Y-%m-%d %H:%M:%S.%f")
         obj_stamp = int(time.mktime(datetime_obj.timetuple()) * 1000.0 + datetime_obj.microsecond / 1000.0)
     except:
         # print("日志中输入的时间不对，请检查")
         logging.error("日志中输入的时间不对，请检查")
-        return None
+
+        #解决日志中日志中 一行时间日志出现了两次
+        tmp_stamp=0
+        return tmp_stamp
+
+        #return None
     else:
         # print("转换成功")
         return obj_stamp
@@ -193,7 +232,10 @@ def get_log_time_after(filepath, filter_log_path, mytime=None):
                 lineNumbers = lineNumbers + 1
                 # print('lineNumbers:', lineNumbers)
                 # if 'recogniationText' in str(line):
-                #     print("找到了 ===================")
+                # #     print("找到了 ===================")
+                # print("==============")
+                # print(line)
+
                 if is_time_up == True:  # 如果找到了时间节点，就直接保存
                     if 'recogniationText' in str(line):
                         # print("找到了 recogniationText===================")
@@ -206,11 +248,16 @@ def get_log_time_after(filepath, filter_log_path, mytime=None):
 
                 if is_time_up == False:  # 如果还没有找到时间节点，才继续查找，找到了就不要在执行了
                     is_time_line = filter_time(line)
+
+                    #print("is_time_line: ",is_time_line)
+
                     if is_time_line:
                         # 如果该行是时间行，转换成毫秒级的时间戳
                         log_tmp_time = transform_log_time(line)
+
                         # print('log_tmp_time:', log_tmp_time)
                         # print("mytime: ", mytime)
+
                         if log_tmp_time >= mytime:
                             is_time_up = True
                             # print("找到了时间隔离点")
@@ -544,6 +591,128 @@ def get_file_all(xiaoyou_path=None, jiaohu_path=None):
     logging.info(jiaohu_path_txt)
     return xiaoyou_path_wav_new, jiaohu_path_wav, jiaohu_path_txt
 
+def get_file_all_no_adb(xiaoyou_path=None, jiaohu_path=None):
+    # 返回的是唤醒词、交互词、交互词的txt全路径的列表
+    xiaoyou_path_wav = []
+    jiaohu_path_wav = []
+    jiaohu_path_txt = []
+    if xiaoyou_path == None:
+        my_path = os.path.abspath(os.getcwd())
+        xiaoyou_path = my_path + '/yuyin/xiaoyou/'
+        logging.info("xiaoyou_path:" + xiaoyou_path)
+        for i, j, k in os.walk(xiaoyou_path):
+            # print('k:',k)
+            for i in k:
+                # print('iiiii',i)
+                all_path = xiaoyou_path + i
+                xiaoyou_path_wav.append(all_path)
+                # print('all_path:',all_path)
+    else:  # 为了GUI页面，使用GUI页面传入路径地址
+        logging.info("xiaoyou_path:" + xiaoyou_path)
+        for i, j, k in os.walk(xiaoyou_path):
+            # print('k:',k)
+            for i in k:
+                # print('iiiii',i)
+                all_path = xiaoyou_path + i
+                xiaoyou_path_wav.append(all_path)
+                # print('all_path:',all_path)
+
+    if jiaohu_path == None:
+        my_path = os.path.abspath(os.getcwd())
+        jiaohu_path = my_path + '/yuyin/jiaohu/'
+        for a, b, c in os.walk(jiaohu_path):
+            # print('c:',c)
+            for j in c:
+                # print("xxxxxxxx")
+                file = os.path.splitext(j)
+                filename, type = file
+                if type == '.txt':
+                    jiaohu_path_txt_allpath = jiaohu_path + j
+                    jiaohu_path_txt.append(jiaohu_path_txt_allpath)
+                elif type == '.wav':
+                    jiaohu_path_wav_allpath = jiaohu_path + j
+                    jiaohu_path_wav.append(jiaohu_path_wav_allpath)
+                else:
+                    # print("有其他类型（非txt和wav格式）文件，请检查，暂且忽略")
+                    logging.warning("有其他类型（非txt和wav格式）文件，请检查，暂且忽略")
+                    continue
+    else:  # GUI页面有传入的交互音频的路径
+        for a, b, c in os.walk(jiaohu_path):
+            # print('c:',c)
+            for j in c:
+                # print("xxxxxxxx")
+                file = os.path.splitext(j)
+                filename, type = file
+                if type == '.txt':
+                    jiaohu_path_txt_allpath = jiaohu_path + j
+                    jiaohu_path_txt.append(jiaohu_path_txt_allpath)
+                elif type == '.wav':
+                    jiaohu_path_wav_allpath = jiaohu_path + j
+                    jiaohu_path_wav.append(jiaohu_path_wav_allpath)
+                else:
+                    # print("有其他类型（非txt和wav格式）文件，请检查，暂且忽略")
+                    logging.warning("有其他类型（非txt和wav格式）文件，请检查，暂且忽略")
+                    continue
+
+    # if len(jiaohu_path_wav) != len(jiaohu_path_txt):
+    #     # print("交互文件中语音和txt数量不一致，请检查")
+    #     logging.error("交互文件中语音和txt数量不一致，请检查")
+    #     return None
+
+    # 处理一下啊唤醒词与交互词数量不一致的问题
+    if len(xiaoyou_path_wav) > len(jiaohu_path_wav):
+        logging.info("交互词数量少于唤醒词数量，处理一下")
+        length = len(jiaohu_path_wav)
+        # print("length:",length)
+        xiaoyou_path_wav_new = xiaoyou_path_wav[:length]
+
+    elif len(xiaoyou_path_wav) < len(jiaohu_path_wav):
+        # 唤醒词少
+        logging.info("唤醒词数量少于交互词数量，处理一下")
+        xiaoyou_path_wav_new = []
+        lenth1 = len(xiaoyou_path_wav)
+        lenth2 = len(jiaohu_path_wav)
+        lenth = lenth2 - lenth1
+        logging.info("读入的唤醒词数量: " + str(lenth1))
+        # print("lenth1",lenth1)
+        # print("length2",lenth2)
+        logging.info("读入的交互词数量: " + str(lenth2))
+
+        zhengshu = lenth // lenth1
+        # print("zhengshu: ",zhengshu)
+        yushu = lenth % lenth1
+        # print("yushu: ",yushu)
+        if zhengshu >= 1:  # 欢迎词很少
+            num = zhengshu + 1
+            xiaoyou_path_wav_1 = xiaoyou_path_wav * num
+            if yushu == 0:
+                xiaoyou_path_wav_new = xiaoyou_path_wav_1
+            else:
+                xiaoyou_path_wav_new = xiaoyou_path_wav_1 + xiaoyou_path_wav[:yushu]
+        else:
+            xiaoyou_path_wav_new = xiaoyou_path_wav + xiaoyou_path_wav[:yushu]
+        # print("=======xiaoyou_path_wav_new:=====",xiaoyou_path_wav_new)
+    else:
+        xiaoyou_path_wav_new = xiaoyou_path_wav
+
+    # print("len(xiaoyou_path_wav_new)=",len(xiaoyou_path_wav_new))
+    len_wake_new_num = len(xiaoyou_path_wav_new)
+    logging.info("处理后的唤醒词数量:" + str(len_wake_new_num))
+
+    # print("len(jiaohu_path_wav)=",len(jiaohu_path_wav))
+    len_jiaohu_new_num = len(jiaohu_path_wav)
+    logging.info("处理后交互词的数量：" + str(len_jiaohu_new_num))
+
+    # print("xiaoyou_path_wav_new:",xiaoyou_path_wav_new)
+    logging.info("唤醒词列表:")
+    logging.info(xiaoyou_path_wav_new)
+    # print('jiaohu_path_wav',jiaohu_path_wav)
+    logging.info("交互词列表：")
+    logging.info(jiaohu_path_wav)
+    # print('jiaohu_path_txt',jiaohu_path_txt)
+    logging.info("交互文本列表：")
+    logging.info(jiaohu_path_txt)
+    return xiaoyou_path_wav_new, jiaohu_path_wav, jiaohu_path_txt
 
 def log_check(filepath, txt_path):
     '''
@@ -559,6 +728,12 @@ def log_check(filepath, txt_path):
     identy_str = ''
     real_str = ''
     nlp_str = ''
+
+    #定义一个列表，原先的代码只把日志中最后一次的正则保存了下来
+    #如果一个循环周期内出现了两次交互，只能保留下来最后一个
+    nlp_strs=[]
+    identy_strs=[]
+
     # print("txt_path: ",txt_path)
     logging.info("txt_path: " + str(txt_path))
 
@@ -575,6 +750,7 @@ def log_check(filepath, txt_path):
         mytxt = mytxt[1:]
     real_str = mytxt
     logging.info("读取的配置文件的字符：" + str(mytxt))
+
 
     with open(filepath, encoding='utf-8') as f:
         lines = f.readlines()
@@ -597,25 +773,94 @@ def log_check(filepath, txt_path):
                 wake_line = line
 
             # 提取识别文字和反馈文字的正则
-            pattern = re.compile(
+            pattern1 = re.compile(
                 r'.*uaibot.*?\[app\]\[onResult\]\sapp\s\-\sasr\s\-\sonResult.*?msg.*?tts\"\:\"(.*?)\"\,\"data\"\:\{\"asrResult\"\:\[\{\"recogniationText\"\:\"(.*?)\"\,\"confidence')
-            matchObj = re.match(pattern, line)
-            if matchObj:
+            matchObj1=re.match(pattern1,line)
+            if matchObj1:
+                logging.info("pattern1 匹配到了")
+                nlp_str = matchObj1.group(1)
+                #logging.info("nlp_str: "+nlp_str)
+
+                nlp_strs.append(nlp_str)
+
+                identy_str = matchObj1.group(2)
+                identy_strs.append(identy_str)
+                logging.info("identy_str: "+identy_str)
+                logging.info("nlp_str: " + nlp_str)
+
+
+            #2020-09-09正则修改
+            pattern2 = re.compile(
+                r'.*?uaibot.*?\[app\]\[onResult\]\sapp\s\-\sasr\s\-\sonResult.*?msg.*?tts\"\:\"(.*?)\"\,\"data\"\:\{\"asrResult\"\:\[\{\"recogniationText\"\:\"(.*?)\"\,\"thirdId')
+            matchObj2 = re.match(pattern2, line)
+            if matchObj2:
+                #print("返回匹配到了")
+                logging.info("pattern2 匹配到了")
                 # print("matchObj.group() : ", matchObj.group())
                 # print("matchObj.group(1) : ", matchObj.group(1))
                 # print("matchObj.group(2) : ", matchObj.group(2))
-                nlp_str = matchObj.group(1)
-                identy_str = matchObj.group(2)
+                nlp_str = matchObj2.group(1)
+
+                nlp_strs.append(nlp_str)
+
+                identy_str = matchObj2.group(2)
+                identy_strs.append(identy_str)
+                logging.info("identy_str: " + identy_str)
+                logging.info("nlp_str: " + nlp_str)
+
+            # pattern3=pattern = re.compile(
+            #     r'.*?uaibot.*?\[app\]\[onResult\]\sapp\s\-\sasr\s\-\sonResult.*?msg.*?\"data\"\:\{\"asrResult\"\:\[\{\"recogniationText\"\:\"(.*?)\"\,\"thirdId.*nlpVersion.*\"response\"\:\"(.*?)\"\,')
+            # matchObj3=re.match(pattern3,line)
+            # if matchObj3:
+            #     #logging.info("识别语料被正则匹配到了")
+            #     logging.info("pattern3 匹配到了")
+            #     identy_str=matchObj3.group(1)
+            #     identy_strs.append(identy_str)
+            #
+            #     nlp_str = matchObj3.group(2)
+            #     nlp_strs.append(nlp_str)
+            #     logging.info("identy_str: " + identy_str)
+            #     logging.info("nlp_str: " + nlp_str)
+
+            pattern4=re.compile(
+                r'.*uaibot.*?\[app\]\[onResult\]\sapp\s\-\sasr\s\-\sonResult.*?msg.*?\"data\"\:\{\"asrResult\"\:\[\{\"recogniationText\"\:\"(.*?)\"\,\"thirdId.*\"nlpResult\".*?\"response\"\:\"(.*?)\".*?')
+            matchObj4=re.match(pattern4,line)
+            if matchObj4:
+                logging.info("pattern4 匹配到了")
+                identy_str = matchObj4.group(1)
+                identy_strs.append(identy_str)
+
+                nlp_str = matchObj4.group(2)
+                nlp_strs.append(nlp_str)
+                logging.info("identy_str: " + identy_str)
+                logging.info("nlp_str: " + nlp_str)
                 # is_indenty=True
     # print("识别到的字符:",identy_str)
-    logging.info("识别到的字符串: " + str(identy_str))
-    if identy_str == mytxt:
+    # # #logging.info("识别到的字符串: " + str(identy_str))
+    # logging.info("列表去重.........")
+    # new_identy_list=list(set(identy_strs))
+    # new_identy_list.sort(key=identy_strs.index)
+    #
+    # new_nlp_list=list(set(nlp_strs))
+    # new_identy_list.sort(key=nlp_strs.index)
+    #
+    # identy_strs=new_nlp_list
+    # nlp_strs=new_identy_list
+
+    logging.info("识别到的字符串: " + str(identy_strs))
+    #if identy_str == mytxt:
+    if mytxt in identy_strs:
         # print("识别成功")
         logging.info("识别成功")
         is_indenty = True
     # print("nlp返回结果： ",nlp_str)
-    logging.info("nlp返回结果： " + str(nlp_str))
-    return is_wake, wake_line, is_indenty, identy_str, real_str, nlp_str
+    #logging.info("nlp返回结果： " + str(nlp_str))
+    logging.info("nlp返回结果： " + str(nlp_strs))
+
+
+    print("is_wake: ",is_wake)
+
+    return is_wake, wake_line, is_indenty, str(identy_strs), real_str, str(nlp_strs)
     # 返回的参数分别是：唤醒词是否识别到、唤醒词所在的行、交互是否识别成功、交互识别成的字符、配置文件中读取到的字符
 
 
@@ -731,12 +976,27 @@ def do_main(deviceid, email, wake_path, jiaohu_path, excel_path):
 
 if __name__ == "__main__":
     # excel_path='D:\\download'
-    deviceid = ''
-    email = '1508691067@qq.com'
-    wake_path = 'C:\\Users\\weiwei\\PycharmProjects\\test_appium\\Audio_Accuracy\\yuyin\\xiaoyou\\'
-    jiaohu_path = 'C:\\Users\\weiwei\\PycharmProjects\\test_appium\\Audio_Accuracy\\yuyin\\jiaohu\\'
-    excel_path = 'D:\\download'
-    do_main(deviceid, email, wake_path, jiaohu_path, excel_path)
+    # deviceid = ''
+    # email = '1508691067@qq.com'
+    # wake_path = 'C:\\Users\\weiwei\\PycharmProjects\\test_appium\\Audio_Accuracy\\yuyin\\xiaoyou\\'
+    # jiaohu_path = 'C:\\Users\\weiwei\\PycharmProjects\\test_appium\\Audio_Accuracy\\yuyin\\jiaohu\\'
+    # excel_path = 'D:\\download'
+    # do_main(deviceid, email, wake_path, jiaohu_path, excel_path)
+
+    # file1="D:\\Python_Project\\Voice_Tool\\Logs\\result_log\\filter_uai_log_2020_09_14_14_37_59.txt"
+    # file2="C:\\Users\\weiwei\\Desktop\\语料合成\\冰箱\\带TXT文件的语音\\冰箱语音-男\\冰箱关闭速冷模式.txt"
+    # log_check(file1,file2)
+    line="b'2020-10-12 10:04:08.040\n'"
+    line2="b' /uaibot(  443:547541701088) DEBUG  [CAE][I][2020-10-10 18:42:09.062365][cae_sr_k_loop:1069][do normal soft refresh timing!]\n'"
+    #line=line.strip('\n')
+    # line1=str(line)
+    # print("line1",line1)
+    res=filter_time(line2)
+    print(res)
+    # res=transform_log_time(line)
+    # print(res)
+
+
 
     # main()
 

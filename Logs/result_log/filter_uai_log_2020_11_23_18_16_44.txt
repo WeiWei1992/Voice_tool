@@ -1,0 +1,190 @@
+This is my filter log ,weiwei
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18908983][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:15:35.887
+
+ /uaibot(  460:548321462864) DEBUG  [app][main] count: 1891, recording state is:1
+
+2020-11-23 18:15:37.988
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18911987][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:15:37.988
+
+ /uaibot(  460:546605564384) DEBUG  [CAE][I][2020-11-23 18:15:37.987983][cae_sock_show_my_ip_port:1226][fd 125, my ip 192.168.1.122 port 56866]
+
+2020-11-23 18:15:38.250
+
+ /uaibot(  460:547702165984) DEBUG  [app][continueWakeupTimerTask] onContiDgTimer in 9
+
+2020-11-23 18:15:40.992
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18914991][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:15:43.995
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18917994][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:15:45.887
+
+ /uaibot(  460:548321462864) DEBUG  [app][main] count: 1892, recording state is:1
+
+2020-11-23 18:15:45.965
+
+ /uaibot(  460:548014006752) DEBUG  [CAE][I][2020-11-23 18:15:45.965068][cae_sr_k_loop:1078][do normal soft refresh timing!]
+
+2020-11-23 18:15:46.999
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18920998][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:15:48.250
+
+ /uaibot(  460:547702165984) DEBUG  [app][continueWakeupTimerTask] onContiDgTimer in 10
+
+2020-11-23 18:15:50.002
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18924001][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:15:50.002
+
+ /uaibot(  460:546605564384) DEBUG  [CAE][I][2020-11-23 18:15:50.002148][cae_sock_show_my_ip_port:1226][fd 125, my ip 192.168.1.122 port 56866]
+
+2020-11-23 18:15:53.006
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18927005][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:15:55.888
+
+ /uaibot(  460:548321462864) DEBUG  [app][main] count: 1893, recording state is:1
+
+2020-11-23 18:15:56.009
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18930008][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:15:58.251
+
+ /uaibot(  460:547702165984) DEBUG  [app][continueWakeupTimerTask] onContiDgTimer in 11
+
+2020-11-23 18:15:59.013
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18933012][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:16:02.016
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18936015][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:16:02.016
+
+ /uaibot(  460:546605564384) DEBUG  [CAE][I][2020-11-23 18:16:02.016261][cae_sock_show_my_ip_port:1226][fd 125, my ip 192.168.1.122 port 56866]
+
+2020-11-23 18:16:05.020
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18939019][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:16:05.888
+
+ /uaibot(  460:548321462864) DEBUG  [app][main] count: 1894, recording state is:1
+
+2020-11-23 18:16:08.023
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18942023][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:16:08.251
+
+ /uaibot(  460:547702165984) DEBUG  [app][continueWakeupTimerTask] onContiDgTimer in 12
+
+2020-11-23 18:16:11.024
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18945024][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:16:14.028
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18948027][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:16:14.028
+
+ /uaibot(  460:546605564384) DEBUG  [CAE][I][2020-11-23 18:16:14.028060][cae_sock_show_my_ip_port:1226][fd 125, my ip 192.168.1.122 port 56866]
+
+2020-11-23 18:16:15.889
+
+ /uaibot(  460:548321462864) DEBUG  [app][main] count: 1895, recording state is:1
+
+2020-11-23 18:16:16.187
+
+ /uaibot(  460:548014006752) DEBUG  [CAE][I][2020-11-23 18:16:16.186468][cae_sr_k_loop:1078][do normal soft refresh timing!]
+
+2020-11-23 18:16:17.032
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18951031][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:16:18.252
+
+ /uaibot(  460:547702165984) DEBUG  [app][continueWakeupTimerTask] onContiDgTimer in 13
+
+2020-11-23 18:16:20.035
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18954034][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:16:23.038
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18957037][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:16:24.679
+
+ /uaibot(  460:548012610016) DEBUG  [app][ProcessThread] ===schedule thread live
+
+2020-11-23 18:16:25.055
+
+ /uaibot(  460:548280541664) DEBUG  [app][updateProgress] updateProgress check progress 0, play status 0
+
+2020-11-23 18:16:25.889
+
+ /uaibot(  460:548321462864) DEBUG  [app][main] count: 1896, recording state is:1
+
+2020-11-23 18:16:26.042
+
+ /uaibot(  460:546605564384) DEBUG  [USS][E][18960041][uss_dex_cu_get_localkey_request_inter_byId:110]no usertoken
+
+
+
+2020-11-23 18:16:26.042
+
+ /uaibot(  460:546605564384) DEBUG  [CAE][I][2020-11-23 18:16:26.041816][cae_sock_show_my_ip_port:1226][fd 125, my ip 192.168.1.122 port 56866]
+
+2020-11-23 18:16:28.252
+
+ /uaibot(  460:547702165984) DEBUG  [app][continueWakeupTimerTask] onContiDgTimer i
